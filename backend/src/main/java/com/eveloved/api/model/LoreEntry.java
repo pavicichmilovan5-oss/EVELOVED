@@ -1,0 +1,38 @@
+package com.eveloved.api.model;
+
+import jakarta.persistence.*;
+import java.time.LocalDateTime;
+
+@Entity
+  @Table(name = "lore_entries")
+  public class LoreEntry {
+
+@Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+private String title;
+
+@Column(columnDefinition = "TEXT")
+    private String content;
+
+private Boolean isClassified;
+    private LocalDateTime createdAt;
+
+public LoreEntry() {
+}
+    public Long getId() { return id; }
+    public void setId(Long id) { this.id = id }
+
+public String getTitle { return title; }
+    public void setTitle(String title) { this.title = title; }
+
+public getContent() { return content; }
+    public void setContent(String content) { this.content = content; }
+
+public getIsClassified() { return isClassified; }
+    public void setIsClassified(Boolean isClassified) { this.isClassified = isClassified; }
+
+public getCreatedAt() { return createdAt; }
+    public setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+  }
